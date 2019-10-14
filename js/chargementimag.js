@@ -182,7 +182,7 @@ for (let dossier of data) {
         // for(const photo of dossier.photos){
         for (let i = 0; i < dossier.photo.length; ++i) {
             const photo = dossier.photo[i];
-            var imgSrc = img + '/' + dossier.album_src + '/' + photo.file;
+            var imgSrc = img + '/' + dossier.album_src + '/' + photo.file + '/';
             var btnUrl = "#";
             //debut de la variable HTML
             newHTML +=
@@ -213,7 +213,7 @@ window.addEventListener("click", function (event) {
         const album = data[albumIdx-1];
         const photo = album.photo[photoIdx];
 
-        var imgSrc = img + '/' + album.album_src + '/' + photo.file;
+        var imgSrc = img + '/' + album.album_src + '/' + photo.file + '/';
 
         var $containerGR = document.getElementById("icilesinfos");
         var $containerGRPhoto = document.getElementById("icilaGRphoto");
