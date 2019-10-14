@@ -1,0 +1,17 @@
+{
+  "name": "bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.23.0"
+  },
+  "scripts": {
+    "custom-css": "./node_modules/.bin/sass ./scss/custom.scss ./css/bootstrap-custom.css",
+    "custom-css-watch": "./node_modules/.bin/sass --watch ./scss/custom.scss ./css/bootstrap-custom.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

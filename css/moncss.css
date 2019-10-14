@@ -1,0 +1,95 @@
+body {
+    background: no-repeat fixed url(../img/photo-256888_1920.jpg);
+}
+
+.bg-light {
+    border-radius: 10px;
+}
+
+.col-2 .btn {
+    max-height: 145px;
+    width: auto;
+    overflow: hidden;
+    margin-top: 8px;
+    box-shadow: 1px 5px 12px;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+.col-2 {
+    margin-left: 15px;
+}
+
+.img-thumbnail {
+    padding: 0px;
+    transform: scale(2);
+
+    transition: transform .3s;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.8);
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    margin-bottom: 13px;
+}
+
+.container {
+    min-width: calc(100vw - 20px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#grandeImagelight{
+    width: calc(48vw - 20%);
+}
+
+@media (min-width:992px) {
+    .container {
+        min-width: calc(100vw - 20px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        min-width: calc(100vw - 20px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width:576px) {
+    .container {
+        min-width: calc(100vw - 20px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .modal-dialog {
+        max-width: 500px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        min-width: calc(100vw - 20px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
