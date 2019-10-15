@@ -48,6 +48,11 @@ nav {
     margin-bottom: 13px;
 }
 
+audio{
+    max-height: 30px;
+    max-width: 250px;
+}
+
 .container {
     min-width: calc(100vw - 20px);
     margin-left: auto;
