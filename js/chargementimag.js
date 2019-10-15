@@ -4,7 +4,7 @@
  */
 
 //  On definit une constante avec un lien vers le dossier images de notre site internet
-const img = "../img";
+const img = "./img";
 
 var list = 0;
 
@@ -15,8 +15,7 @@ var data = [{
         album_name: "Heros",
         album_src: "Heros",
         index: 1,
-        photo: [
-            {
+        photo: [{
                 file: "211f642618a7d5298c16cfc2e079d646.jpg",
                 title: "Cosplay de ctn america",
                 info: "&#x3C;b&#x3E;Steven &#xAB; Steve &#xBB; Rogers&#x3C;/b&#x3E;&#x3C;p&#x3E;alias Captain America est un super-h&#xE9;ros &#xE9;voluant dans l&#x27;univers Marvel de la maison d&#x27;&#xE9;dition Marvel Comics. Cr&#xE9;&#xE9; par sc&#xE9;nariste Joe Simon et le dessinateur Jack Kirby, le personnage de fiction appara&#xEE;t pour la premi&#xE8;re fois dans le comic book Captain America Comics #1 en d&#xE9;cembre 1940. il a pris quelque kilos.&#x3C;/p&#x3E;"
@@ -75,7 +74,7 @@ var data = [{
     },
     {
         album_name: "Zeros",
-        album_src: img + "Zeros",
+        album_src:"Zeros",
         index: 2,
         photo: [{
             file: "1.jpg",
@@ -86,8 +85,7 @@ var data = [{
         album_name: "Perso Secondaire",
         album_src: "PersoSec",
         index: 3,
-        photo: [
-            {
+        photo: [{
             file: "images (1).jpg",
             title: "Cosplay de Chewee / R2d2 / C3PO",
             info: "Cosplay de KLITé !"
@@ -95,7 +93,7 @@ var data = [{
     },
     {
         album_name: "Lieux",
-        album_src: img + "Lieux",
+        album_src:"Lieux",
         index: 4,
         photo: [{
             file: "1.jpg",
@@ -104,10 +102,9 @@ var data = [{
     },
     {
         album_name: "Vilains",
-        album_src:"Vilains",
+        album_src: "Vilains",
         index: 5,
-        photo: [
-            {
+        photo: [{
                 file: "9dfba60620fdb7d03fa396d237b64ab9.jpg",
                 title: "Cosplay de Akuma",
                 info: "Akuma ennemi jurer de ken et ryu."
@@ -122,11 +119,11 @@ var data = [{
                 title: "Cosplay de president",
                 info: "Président est une marque commerciale pour une série de fromages industriels français du groupe agroalimentaire Lactalis, créée par Michel Besnier en 1968. En 2018, c'est la troisième marque alimentaire préférée des Français, et celle ayant le taux de pénétration le plus grand."
             }
-    ]
+        ]
     },
     {
         album_name: "Neutres",
-        album_src: img + "Neutres",
+        album_src:"Neutres",
         index: 6,
         photo: [{
             file: "1.jpg",
@@ -135,7 +132,7 @@ var data = [{
     },
     {
         album_name: "Code de la route PACA",
-        album_src: img + "CDLRPACA",
+        album_src: "CDLRPACA",
         index: 7,
         photo: [{
             file: "1.jpg",
@@ -144,7 +141,7 @@ var data = [{
     },
     {
         album_name: "Autres",
-        album_src: img + "Autres",
+        album_src: "Autres",
         index: 8,
         photo: [{
             file: "1.jpg",
@@ -161,15 +158,15 @@ for (let dossier of data) {
     let btn = document.createElement("BUTTON");
     btn.innerHTML = dossier.album_name;
     if (dossier.index === 1) {
-        btn.className = "btn btn-outline-success text-font-color btnnav";
+        btn.className = "btn shadow btn-outline-success text-font-color btnnav";
     } else if (dossier.index === 2) {
-        btn.className = "btn btn-outline-info text-font-color btnnav";
+        btn.className = "btn shadow btn-outline-info text-font-color btnnav";
     } else if (dossier.index === 5) {
-        btn.className = "btn btn-outline-danger text-font-color btnnav";
+        btn.className = "btn shadow btn-outline-danger text-font-color btnnav";
     } else {
-        btn.className = "btn btn-outline-warning text-font-color btnnav";
+        btn.className = "btn shadow btn-outline-warning text-font-color btnnav";
     }
-//demande de placer les element cree dans le div icilsbtn
+    //demande de placer les element cree dans le div icilsbtn
     document.getElementById("icilsbtn").appendChild(btn);
 
     // lorsque on appuye sur le bouttons cela va crée une nouveau bloque HTML qui correspond au nombre d'images mis dans les album plus haut 
@@ -182,7 +179,7 @@ for (let dossier of data) {
         // for(const photo of dossier.photos){
         for (let i = 0; i < dossier.photo.length; ++i) {
             const photo = dossier.photo[i];
-            var imgSrc = img + '/' + dossier.album_src + '/' + photo.file + '/';
+            var imgSrc = img + '/' + dossier.album_src + '/' + photo.file;
             var btnUrl = "#";
             //debut de la variable HTML
             newHTML +=
@@ -210,10 +207,10 @@ window.addEventListener("click", function (event) {
         const albumIdx = new Number(elementImg.getAttribute('data-album-idx'));
         const photoIdx = new Number(elementImg.getAttribute('data-photo-idx'));
 
-        const album = data[albumIdx-1];
+        const album = data[albumIdx - 1];
         const photo = album.photo[photoIdx];
 
-        var imgSrc = img + '/' + album.album_src + '/' + photo.file + '/';
+        var imgSrc = img + '/' + album.album_src + '/' + photo.file;
 
         var $containerGR = document.getElementById("icilesinfos");
         var $containerGRPhoto = document.getElementById("icilaGRphoto");
@@ -241,9 +238,10 @@ window.addEventListener("click", function (event) {
 //fonctionnalité pour traduire automatiquement le text bizarre en text claire pour le navigateur.
 
 const $txtarea = document.createElement("textarea");
-function restoreHTMLEntities(texte){
+
+function restoreHTMLEntities(texte) {
     // Transforme les entités
     $txtarea.innerHTML = texte;
-    
+
     return $txtarea.value;
 }
