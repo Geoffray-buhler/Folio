@@ -8,7 +8,7 @@ const img = "./img";
 
 var list = 0;
 
-// On cree un tableau avec les differant albume et dans ses albume je defini le nom de l'image / 
+// On cree un tableau avec les differant albums et dans ses albums je defini le nom de l'image / 
 // le titre de l'image ainsi que les infos qui vont avec.
 
 var data = [{
@@ -83,7 +83,7 @@ var data = [{
                 info: "&#x3C;b&#x3E;Wonder Woman&#x3C;/b&#x3E; &#x3C;p&#x3E; est une super-h&#xE9;ro&#xEF;ne de bande dessin&#xE9;e am&#xE9;ricaine cr&#xE9;&#xE9;e par William Moulton Marston, qui appara&#xEE;t pour la premi&#xE8;re fois en d&#xE9;cembre 1941 dans All Star Comics #8. Elle est, &#xE0; cette &#xE9;poque, l&#x27;une des premi&#xE8;res super-h&#xE9;ro&#xEF;nes et demeure la plus c&#xE9;l&#xE8;bre d&#x27;entre elles."
             },
             {
-                file: "en.jpg",
+                file: "En.jpg",
                 title: "Gaiou sama",
                 info: "&#x3C;b&#x3E;Wonder Woman&#x3C;/b&#x3E; &#x3C;p&#x3E; est une super-h&#xE9;ro&#xEF;ne de bande dessin&#xE9;e am&#xE9;ricaine cr&#xE9;&#xE9;e par William Moulton Marston, qui appara&#xEE;t pour la premi&#xE8;re fois en d&#xE9;cembre 1941 dans All Star Comics #8. Elle est, &#xE0; cette &#xE9;poque, l&#x27;une des premi&#xE8;res super-h&#xE9;ro&#xEF;nes et demeure la plus c&#xE9;l&#xE8;bre d&#x27;entre elles."
             },
